@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" class="custom-dark-bg text-white">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/users.css">
+    <title>witch cash Admin Panel</title>
+    <!-- Add Firebase SDK -->
+
+
+</head>
+
+<body class="custom-dark-bg text-white">
+
+    <div class="container-fluid custom-dark-bg sideBar">
+        <h2>Witch Cash</h2>
+        <p id="versionCode">V:1.0.0</p>
+        <div class="tab" id="home">
+            <i class="bi bi-speedometer"></i>
+            <p>Dashboard</p>
+        </div>
+        <div class="tab" id="payouts">
+            <i class="bi bi-currency-bitcoin"></i>
+            <p>User Payouts</p>
+        </div>
+        <div class="tab" id="offers">
+            <i class="bi bi-dice-5"></i>
+            <p>add Offer</p>
+        </div>
+        <div class="tab" id="notify">
+            <i class="bi bi-chat-left-fill"></i>
+            <p>send Notification</p>
+        </div>
+        <div class="tab" id="payments">
+            <i class="bi bi-cash-coin"></i>
+            <p>Payouts Methods</p>
+        </div>
+        <div class="tab" id="users">
+            <i class="bi bi-people-fill"></i>
+            <p>Users</p>
+        </div>
+
+    </div>
+
+
+    <div class="container custom-dark-bg docy">
+
+        <section class="container-fluid header custom-dark-bg mt-4 top">
+
+            <div class="card">
+                <p class="time-text" id="userCount"><span>0</span></p>
+                <p class="day-text">Total users</p>
+                <i class="bi bi-person-badge-fill moon"></i>
+            </div>
+
+            
+
+
+        </section>
+
+        <!-- Payouts Section -->
+        <section id="payouts" class="mt-4 custom-dark-bg">
+            <h2>User in app</h2>
+            <table class="table custom-dark-bg table-borderless">
+                <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>Coins Balance</th>
+                        <th>ReffCode</th>
+                        <th>user name</th>
+                       
+
+                    </tr>
+                </thead>
+                <tbody id="users-table-body">
+                    <!-- Filled by JavaScript -->
+                </tbody>
+            </table>
+        </section>
+
+
+
+
+
+
+    </div>
+
+    <!-- Firebase and Custom Script -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+
+    <script type="module" src="../js/users.js"></script>
+    <script type="module" src="../js/PageManager.js"></script>
+
+</body>
+
+</html>

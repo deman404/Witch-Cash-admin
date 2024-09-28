@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" class="custom-dark-bg text-white">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>witch cash Admin Panel</title>
+    <!-- Add Firebase SDK -->
+
+
+</head>
+
+<body class="custom-dark-bg text-white">
+
+    <div class="container-fluid custom-dark-bg sideBar">
+        <h2>Witch Cash</h2>
+        <p>V:1.0.0</p>
+        <div class="tab" id="home">
+            <i class="bi bi-speedometer"></i>
+            <p>Dashboard</p>
+        </div>
+        <div class="tab" id="payouts">
+            <i class="bi bi-currency-bitcoin"></i>
+            <p>User Payouts</p>
+        </div>
+        <div class="tab" id="offers">
+            <i class="bi bi-dice-5"></i>
+            <p>add Offer</p>
+        </div>
+        <div class="tab" id="notify">
+            <i class="bi bi-chat-left-fill"></i>
+            <p>send Notification</p>
+        </div>
+        <div class="tab" id="payments">
+            <i class="bi bi-cash-coin"></i>
+            <p>Payouts Methods</p>
+        </div>
+        <div class="tab" id="users">
+            <i class="bi bi-people-fill"></i>
+            <p>Users</p>
+        </div>
+
+    </div>
+
+
+    <Section class="homeSection">
+        <div class="container-fluid custom-dark-bg top">
+            <div class="card">
+                <p class="time-text" id="txt1"><span>0</span></p>
+                <p class="day-text">Total users</p>
+                <i class="bi bi-person-badge-fill moon"></i>
+            </div>
+
+            <div class="card2">
+                <p class="time-text" id="txt2"><span>0</span></p>
+                <p class="day-text">Total PaidOut</p>
+                <i class="bi bi-cash-coin moon"></i>
+            </div>
+
+            <div class="card3">
+                <p class="time-text" id="txt3"><span>0</span></p>
+                <p class="day-text">Total offers</p>
+                <i class="bi bi-basket3-fill moon"></i>
+            </div>
+
+            <div class="card4">
+                <p class="time-text" id="txt4"><span>0</span></p>
+                <p class="day-text">Total download</p>
+                <i class="bi bi-file-arrow-down-fill moon"></i>
+            </div>
+            <div class="card5" id="versionUpdate">
+                <p class="time-text" id="versionCode"><span>1.0.0</span></p>
+                <p class="day-text">Version code</p>
+                <i class="bi bi-code-slash moon"></i>
+            </div>
+        </div>
+
+        <div class="firstList">
+            <div class="brd1">
+                <h1>Top 3 users</h1>
+                <table class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <th>gmail</th>
+                            <th>Coins Balance</th>
+                            <th>ReffCode</th>
+                        </tr>
+                    </thead>
+                    <tbody id="users-table-body">
+                        <!-- Filled by JavaScript -->
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="brd2">
+                <h1>Last 3 Offers</h1>
+                <table class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <th>image</th>
+                            <th>Name</th>
+                            <th>Prix</th>
+                        </tr>
+                    </thead>
+                    <tbody id="offers-table-body">
+                        <!-- Filled by JavaScript -->
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <form class="allpageHide" id="versionForm" style="display: none;">
+            <!-- Hidden form for entering the version code -->
+            <div  class="update">
+                <h2>UPDATE</h2>
+                <i class="bi bi-x-circle-fill moon" id="close" style="cursor: pointer;"></i>
+
+                <input type="text" id="versionInput" placeholder="Enter version (e.g., X.X.X)" required>
+                <button id="saveVersionBtn" type="submit">Save</button>
+                <div class="alert alert-success" role="alert">
+                    update is live now !
+                </div>
+                
+            </div>
+            
+        </form>
+    </Section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Firebase and Custom Script -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+
+
+    <script type="module" src="../js/home.js"></script>
+    <script type="module" src="../js/PageManager.js"></script>
+
+</body>
+
+</html>

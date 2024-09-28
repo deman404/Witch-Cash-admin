@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" class="custom-dark-bg text-white">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/offer.css">
+    <title>witch cash Admin Panel</title>
+    <!-- Add Firebase SDK -->
+
+
+</head>
+
+<body class="custom-dark-bg text-white">
+
+    <div class="container-fluid custom-dark-bg sideBar">
+        <h2>Witch Cash</h2>
+        <p id="versionCode">V:1.0.0</p>
+        <div class="tab" id="home">
+            <i class="bi bi-speedometer"></i>
+            <p>Dashboard</p>
+        </div>
+        <div class="tab" id="payouts">
+            <i class="bi bi-currency-bitcoin"></i>
+            <p>User Payouts</p>
+        </div>
+        <div class="tab" id="offers">
+            <i class="bi bi-dice-5"></i>
+            <p>add Offer</p>
+        </div>
+        <div class="tab" id="notify">
+            <i class="bi bi-chat-left-fill"></i>
+            <p>send Notification</p>
+        </div>
+        <div class="tab" id="payments">
+            <i class="bi bi-cash-coin"></i>
+            <p>Payouts Methods</p>
+        </div>
+        <div class="tab" id="users">
+            <i class="bi bi-people-fill"></i>
+            <p>Users</p>
+        </div>
+
+    </div>
+
+
+    <div class="container custom-dark-bg docy">
+
+        <section class="container-fluid header custom-dark-bg mt-4 top">
+
+            <div class="card">
+                <p class="time-text" id="app"><span>0</span></p>
+                <p class="day-text">App Offers</p>
+                <i class="bi bi-google-play moon"></i>
+            </div>
+
+            <div class="card2">
+                <p class="time-text" id="game"><span>0</span></p>
+                <p class="day-text">Games Offers</p>
+                <i class="bi bi-controller moon"></i>
+            </div>
+
+            <div class="card3">
+                <p class="time-text" id="service"><span>0</span></p>
+                <p class="day-text">Service Offers</p>
+                <i class="bi bi-journal-text moon"></i>
+            </div>
+
+            <div class="card4">
+                <p class="time-text" id="servery"><span>0</span></p>
+                <p class="day-text">servery Offers</p>
+                <i class="bi bi-award-fill moon"></i>
+            </div>
+
+
+
+
+        </section>
+
+        <!-- Add Offers Section -->
+        <section id="offers" class="mt-4">
+            <div class="hider">
+                <h2>Add Offer</h2>
+                <button id="toggleFormBtn" class="btn btn-primary">Show Form</button>
+            </div>
+
+            <div class="good alert alert-success" role="alert">
+                A simple success alert—check it out!
+            </div>
+            <form id="offer-form" style="display: none; margin-top: 20px;">
+                <div class="form-group">
+                    <label for="offer-img">offer image</label>
+                    <input type="text" id="offer-img" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="offer-title">Title</label>
+                    <input type="text" id="offer-title" class="form-control" required>
+                </div>
+                <label for="offer-type">Select a type:</label>
+                <select id="offer-type" class="form-control" required>
+                    <option value="App">App</option>
+                    <option value="Game">Game</option>
+                    <option value="Service">Service</option>
+                    <option value="Servery">Servery</option>
+                </select>
+                
+                <div class="form-group">
+                    <label for="offer-description">description</label>
+                    <textarea id="offer-description" class="form-control" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="offer-price">price</label>
+                    <input type="text" id="offer-price" class="form-control" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Add Offer</button>
+            </form>
+            <h2 class="mt-4">User offers</h2>
+            <table class="table custom-dark-bg">
+                <thead>
+                    <tr>
+                        <th>image</th>
+                        <th>title</th>
+                        <th>type</th>
+                        <th>description</th>
+                        <th>prix</th>
+                        <th>status</th>
+                    </tr>
+                </thead>
+                <tbody id="offers-table-body">
+                    <!-- Filled by JavaScript -->
+
+                </tbody>
+            </table>
+        </section>
+
+
+        <div class="danger alert alert-danger" role="alert">
+            the offer was deleted successfully !!
+          </div>
+
+
+
+
+
+
+    </div>
+
+    <!-- Firebase and Custom Script -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+
+    <script type="module" src="../js/offers.js"></script>
+    <script type="module" src="../js/PageManager.js"></script>
+
+</body>
+
+</html>
